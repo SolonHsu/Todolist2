@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0/">
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel='stylesheet' type='text/css' href='css/index.css'/>
+        <title>Document</title>
+       <!--
+        <style>
+            .text{text-decoration: line-through;font-weight:bold;}
+        </style>
+        -->
+    </head>
+    <body>
+        <h1>代辦事項列表</h1>
+        <input type="text" id="content" name="content">
+        <input type="submit" id="send" value="儲存">
+        <ul id="list">
+        <ul>
+            <% for(item in todolist){ %>
+            
+                <li><%- todolist[item].content %>
+                <input type="button" data-id="<%- item %>"name=""value="刪除"></li>
+                <% } %>
+                <div> <%= boss  %></div>
+        </ul>
+        <script src="/js/bll.js"></script>
+    </body>
+</html>
