@@ -33,7 +33,7 @@ app.get('/',function(req,res){
     fireData.ref('todos').once('value',function(snapshot){
         var data = snapshot.val();
         var title = data.title;
-        res.render('index',{"todolist":data,"boss":"路由成功"})
+        res.render('index',{"todolist":data})
     }
 
     )
@@ -123,5 +123,5 @@ app.use(function(err,req,res,next){
 })
 */
 //監聽port
-var port =process.env.PORT  ||3000;
+var port =process.env.PORT  ||6001;
 app.listen(port);
